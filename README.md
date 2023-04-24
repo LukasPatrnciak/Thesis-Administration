@@ -19,19 +19,19 @@ ako si spustiť tzv. "sanity-check" test lokálne pre otestovanie splnenia konfi
 
 ## Špecifikácia
 
-Aplikácia musí publikovať REST webové služby dodržiavajúce dodanú [OpenAPI 3 špecifikáciu](./src/main/resources/openapi3.spec.yaml). 
+Aplikácia musí publikovať **REST webové služby** dodržiavajúce dodanú [**OpenAPI 3 špecifikáciu**](./src/main/resources/openapi3.spec.yaml). 
 Aplikácia tak musí zabezpečiť CRUD operácie cez publikované webové služby (s výnimkou update operácie). Aplikácia musí
 taktiež poskytovať webové služby pre priradenie a odovzdanie záverečnej práce, a tak isto pre vyhľadanie záverečnej práce
 podľa platných kritérií (t.j. podľa študenta, alebo podľa učiteľa).
 
-Pri implementácií použite protokol HTTP/1.1, ako formát prenášaných objektov použite application/json s UTF-8 kódovaním. 
+Pri implementácií použite protokol **HTTP/1.1**, ako formát prenášaných objektov použite **application/json** s UTF-8 kódovaním. 
 Pri chybových stavoch vráťte objekt `Message` (ako je uvedené v špecifikácii) s príslušných kódom chyby. 
 Kód odpovede nastavte tak, aby najlepšie vystihla povahu odpovede. 
 HTTP kódy: [https://www.restapitutorial.com/httpstatuscodes.html](https://www.restapitutorial.com/httpstatuscodes.html).
 
 ### Autentifikácia
 
-V rámci projektu implementujte autentifikačný mechanizmus Basic Access Authentication [https://en.wikipedia.org/wiki/Basic_access_authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)
+V rámci projektu implementujte **autentifikačný mechanizmus Basic Access Authentication** [https://en.wikipedia.org/wiki/Basic_access_authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)
 (skrátene Basic Auth). Jednotlivé webové služby sú v špecifikácii označené či je potrebná autentifikácia pre ich dopytovanie. 
 Používateľom riešenia, ktorým je umožnené prihlásenie, je každý vytvorený študent a učiteľ.
 Ako prihlasovacie meno používateľa použite email učiteľa alebo študenta. Entitu študenta a učiteľa rozšírte o atribút `password`. 
@@ -50,7 +50,7 @@ Zlyhanie prihlásenia má vrátiť odpoveď s kódom 401.
 
 ### Autorizácia
 
-V rámci projektu implementujte autorizačný mechanizmus, ktorý bude rozlišovať medzi prístupom učiteľa a študenta.
+V rámci projektu implementujte **autorizačný mechanizmus**, ktorý bude **rozlišovať medzi prístupom učiteľa a študenta**.
 V [dodanej OpenAPI 3 špecifikácii](./src/main/resources/openapi3.spec.yaml) pri niektorých REST webových službách je popísané,
 či má byť implementované obmedzenie pre prístup prihláseného používateľa (napr. pri službe `DELETE /api/student/{id}`). 
 Ak nie je zmienené žiadne takéto obmedzenie pri službe, môže ju dopytovať učiteľ aj študent a spracovanie ich dopytu musí
@@ -60,8 +60,8 @@ V prípade nedostatočných oprávnení prihláseného používateľa pre vykona
 
 ## Spustenie
 
-Webovú aplikáciu implementujte pomocou frameworku Jersey (referenčná implementácie JAX-RS štandardu) ako tzv. 'standalone'
-webovú aplikáciu. Výstupom riešenia musí byť spustiteľný JAR súbor. HTTP server aplikácie má počúvať na porte 8080.
+Webovú aplikáciu implementujte pomocou frameworku Jersey (referenčná implementácie JAX-RS štandardu) ako tzv. **'standalone'
+webovú aplikáciu**. Výstupom riešenia musí byť spustiteľný JAR súbor. HTTP server aplikácie má počúvať na porte 8080.
 
 Konfiguráciu spustenia HTTP servera je možné nájsť v triede [ApplicationConfiguration](./src/main/java/sk/stuba/fei/uim/vsa/pr2/ApplicationConfiguration.java). 
 Jej hodnoty je možné meniť pomocou tzv. 'environment variables'. Východzie hodnoty jednotlivých atribútov nemeňte.
