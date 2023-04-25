@@ -313,7 +313,7 @@ paths:
         200:
           description: |
             Objekt záverečnej práce so zadaným identifikátorom. 
-            V prípade, že taká záverečná práca neexistuje tak je vrátená odpoveď 404.
+            V prípade, že taká záverečná práca neexistuje, tak je vrátená odpoveď 404.
           content:
             application/json:
               schema:
@@ -388,7 +388,7 @@ paths:
                   format: int64
       responses:
         200:
-          description: Objekt záverečnej práce, ktorá bola priradený študentovi. Vrátený objekt má obsahovať aj objekt študenta priradeného k prácu.
+          description: Objekt záverečnej práce, ktorá bola priradená študentovi. Vrátený objekt má obsahovať aj objekt študenta priradeného k prácu.
           content:
             application/json:
               schema:

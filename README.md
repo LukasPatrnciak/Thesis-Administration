@@ -14,8 +14,8 @@ V tomto projekte môžte vychádzať z vášho riešenia 1. semestrálneho proje
 Zachovajte asociácie a objekty definované v 1. projekte. Nakoľko účelom tohto zadania je implementácia REST webových služieb,
 môžte upraviť riešenie z predchádzajúceho zadania podľa svojho najlepšieho vedomia a svedomia, tak aby splnilo toto zadanie.
 Pre vypracovanie sa môžte inšpirovať [projektami z cvičení](https://github.com/Interes-Group/b-vsa-cvicenia). 
-Dbajte na držanie pokynov zadania nakoľko bude opravované automatizovane pomocou JUnit testov. Na konci zadania je návod, 
-ako si spustiť tzv. "sanity-check" test lokálne pre otestovanie splnenia konfigurácie vypracovania aby bol projekt testovateľný.
+Dbajte na dodržiavanie pokynov zadania nakoľko bude opravované automatizovane pomocou JUnit testov. Na konci zadania je návod, 
+ako si lokálne spustiť tzv. "sanity-check" test, pre otestovanie splnenia konfigurácie vypracovania, aby bol projekt testovateľný.
 
 ## Špecifikácia
 
@@ -25,7 +25,7 @@ taktiež poskytovať webové služby pre priradenie a odovzdanie záverečnej pr
 podľa platných kritérií (t.j. podľa študenta, alebo podľa učiteľa).
 
 Pri implementácií použite protokol **HTTP/1.1**, ako formát prenášaných objektov použite **application/json** s UTF-8 kódovaním. 
-Pri chybových stavoch vráťte objekt `Message` (ako je uvedené v špecifikácii) s príslušných kódom chyby. 
+Pri chybových stavoch vráťte objekt `Message` (ako je uvedené v špecifikácii) s príslušným kódom chyby. 
 Kód odpovede nastavte tak, aby najlepšie vystihla povahu odpovede. 
 HTTP kódy: [https://www.restapitutorial.com/httpstatuscodes.html](https://www.restapitutorial.com/httpstatuscodes.html).
 
