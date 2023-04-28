@@ -256,14 +256,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Thesis'
+              $ref: '#/components/schemas/CreateThesisRequest'
       responses:
         201:
           description: Objekt novo vytvorenej záverečnej práce.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateThesisRequest'
+                $ref: '#/components/schemas/Thesis'
         401:
           $ref: '#/components/responses/Unauthorized'
         403:
@@ -635,9 +635,6 @@ components:
         email:
           type: string
           format: email
-        password:
-          type: string
-          format: password
         institute:
           type: string
         department:
