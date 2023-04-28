@@ -1,4 +1,4 @@
-# B-VSA LS 22/23 - Semestrálny projekt 1
+# B-VSA LS 22/23 - Semestrálny projekt 2
 
 ![Java 1.8](https://img.shields.io/badge/Java-1.8-red)
 ![EclipseLink 2.7.11](https://img.shields.io/badge/EclipseLink-2.7.11-blue)
