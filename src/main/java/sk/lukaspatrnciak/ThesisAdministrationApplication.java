@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.vsa.pr2;
+package sk.lukaspatrnciak;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -8,8 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import java.net.URI;
 
-import static sk.stuba.fei.uim.vsa.pr2.ApplicationConfiguration.BASE_URI;
-
 public class Project2Application {
 
     private static final Logger log = LoggerFactory.getLogger(Project2Application.class);
@@ -17,8 +15,8 @@ public class Project2Application {
     public static HttpServer startServer() {
         final ResourceConfig rc = ResourceConfig.forApplicationClass(JAXRSApplicationConfiguration.class);
         log.info("Starting Grizzly2 HTTP server...");
-        log.info("Server listening on " + BASE_URI);
-        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+        log.info("Server listening on " + ApplicationConfiguration.BASE_URI);
+        return GrizzlyHttpServerFactory.createHttpServer(URI.create(ApplicationConfiguration.BASE_URI), rc);
     }
 
     public static void main(String[] args) {
